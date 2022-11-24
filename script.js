@@ -31,7 +31,7 @@ submitBtn.addEventListener('click', async function(){
 });
 
 function getMovies(keyword){
-    return fetch('http://www.omdbapi.com/?apikey=e7773d79&s=' + keyword)
+    return fetch('https://www.omdbapi.com/?apikey=e7773d79&s=' + keyword)
         // jika berhasil, maka
         .then(response => {
             if(!response.ok){
@@ -73,7 +73,7 @@ document.addEventListener('click', async function(e){
 });
 
 function getMovieDetail(imdbid){
-    return fetch('http://www.omdbapi.com/?apikey=e7773d79&i=' + imdbid)
+    return fetch('https://www.omdbapi.com/?apikey=e7773d79&i=' + imdbid)
     .then(response => response.json())
     .then(response => response);
 }
